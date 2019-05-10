@@ -1,0 +1,41 @@
+body {
+    background: black;
+}
+
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.top-nav-bar>nav {
+    float: right;
+}
+
+.top-nav-bar>nav>ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.top-nav-bar>nav>ul>li {
+    float: left;
+    margin-left: 17px;
+    margin-right: 17px;
+    /* border: 1px solid green */
+}
+
+.top-nav-bar>nav>ul>li>a {
+    color: #c4c4c4;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: block;
+    border-bottom: 2px solid transparent;
+}
+
+.top-nav-bar>nav>ul>li>a:hover {
+    border-bottom: 2px solid salmon;
+}
