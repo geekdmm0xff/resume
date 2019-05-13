@@ -1,5 +1,12 @@
 body {
     background: black;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
 }
 
 .clearfix::after {
@@ -8,8 +15,29 @@ body {
     clear: both;
 }
 
+/* 界面 */
+.top-nav-bar {
+    padding: 20px 10px 0 20px;
+}
+
+.top-nav-bar>.logo {
+    font-size: 22px;
+    font-family: "Ayuthaya Bolo";
+    padding: 10px 0 10px 0;
+}
+
+.top-nav-bar>.logo>.rs {
+    color: #E8676B;
+    margin-right: 5px;
+}
+
+.top-nav-bar>.logo>.card {
+    color: #9A9DA2;
+}
+
 .top-nav-bar>nav {
-    float: right;
+    padding: 10px 0 0 10px;
+    font-size: 13px;
 }
 
 .top-nav-bar>nav>ul {
@@ -25,10 +53,12 @@ body {
     /* border: 1px solid green */
 }
 
+.top-nav-bar>nav>ul>li:first-child {
+    margin-left: 0;
+}
+
 .top-nav-bar>nav>ul>li>a {
     color: #c4c4c4;
-    text-decoration: none;
-    font-size: 14px;
     font-weight: bold;
     padding-top: 10px;
     padding-bottom: 10px;
