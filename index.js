@@ -73,26 +73,5 @@ var repeatedNTimes = function(A) {
     }
   }
 };
-var a3 = repeatedNTimes([
-  12,
-  62,
-  62,
-  30,
-  62,
-  96,
-  97,
-  62,
-  62,
-  6,
-  73,
-  62,
-  62,
-  5,
-  62,
-  8,
-  64,
-  62,
-  18,
-  62
-]);
+var a3 = repeatedNTimes([12, 62, 62, 97, 62, 62, 62, 18, 62]);
 console.log("ans3:", a3);
