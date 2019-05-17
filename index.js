@@ -74,4 +74,80 @@ var repeatedNTimes = function(A) {
   }
 };
 var a3 = repeatedNTimes([12, 62, 62, 97, 62, 62, 62, 18, 62]);
-console.log("ans3:", a3);
+// console.log("ans3:", a3);
+
+class Node {
+  constructor(value) {
+    this.value = value;
+    this.next = null;
+  }
+
+  add(value) {
+    if (this.next === null) {
+      this.next = new Node(value);
+      return;
+    }
+    this.next.add(value);
+  }
+}
+
+class LinkedList {
+  constructor() {
+    this.head = null;
+  }
+
+  add(value) {
+    if (this.head === null) {
+      this.head = new Node(value);
+      return;
+    }
+    this.head.add(value);
+  }
+
+  popHead() {
+    if (this.head === null) {
+      return new Error("LinkedList is empty!");
+    }
+    let head = this.head;
+    this.head = this.head.next;
+    return head;
+  }
+
+  popTail() {
+    let head = this.head;
+    let tartget = null;
+    while (head.next.next !== null) {
+      head = head.next;
+    }
+    tartget = head;
+    head.next = null;
+    return tartget;
+  }
+
+  print() {
+    for (let node = this.head; node !== null; node = node.next) {
+      console.log("node:", node.value);
+    }
+  }
+}
+
+let run = function() {
+  console.log("run!!");
+};
+
+// let ll = new LinkedList();
+// ll.add(run);
+// ll.add(run);
+// ll.add(run);
+// let node = ll.popHead();
+// node.value();
+
+/**
+ * Definition for singly-linked list.
+
+ */
+
+function ListNode(val) {
+  this.val = val;
+  this.next = null;
+}
