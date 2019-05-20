@@ -169,10 +169,10 @@ hr {
 
 .user-card > footer.social a {
   display: inline-block;
-  line-height: 40px;
-  padding: 5px 0;
+  line-height: 30px;
+  padding: 10px 10px;
   border-radius: 50%;
-  border: 1px solid black;
+  margin: 16px;
 }
 
 .user-card > footer.social a:hover {
@@ -180,8 +180,8 @@ hr {
 }
 
 .user-card > footer.social svg {
-  fill: #fff;
-  vertical-align: top;
   width: 30px;
   height: 30px;
+  fill: #fff;
+  vertical-align: top;
 }
