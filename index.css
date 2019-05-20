@@ -1,13 +1,24 @@
 body {
-  background: black;
+  background: #efefef;
   margin: 0;
   padding: 0;
-  color: white;
+  color: black;
+}
+
+* {
+  margin: 0;
+  padding: 0;
 }
 
 a {
   text-decoration: none;
   color: inherit;
+}
+
+hr {
+  height: 0;
+  border: none;
+  border-top: 1px solid #dedede;
 }
 
 .clearfix::after {
@@ -94,25 +105,83 @@ a {
 
 .user-card {
   border: 1px solid red;
-  width: 930px;
+  max-width: 930px;
+  margin: 0 auto;
+  background-color: #fff;
 }
 
 .user-card .welcome {
+  display: inline-block;
   background-color: #e8676b;
   font-size: 14px;
   font-weight: 700;
   padding: 5px 18px;
   position: relative;
-  top: 0;
-  left: 0;
+  margin-bottom: 25px;
 }
 
-.triangle {
-  display: inline-block;
+.user-card .welcome .triangle {
+  display: block;
   border: 10px solid transparent;
+  width: 0px;
   border-left-color: #e8676b;
-  border-top-width: 0;
+  border-top-width: 0px;
   position: absolute;
+  left: 4px;
   top: 100%;
-  left: 0;
+}
+
+.user-card .profile {
+  padding: 50px;
+}
+
+.user-card .picture {
+  margin-right: 60px;
+}
+
+.user-card .text h1 {
+  margin-bottom: 15px;
+}
+
+.user-card .text hr {
+  margin: 20px 0;
+}
+
+.user-card .text dt,
+.user-card .text dd {
+  float: left;
+  margin-bottom: 24px;
+}
+
+.user-card .text dt {
+  width: 30%;
+  font-weight: bold;
+}
+
+.user-card .text dd {
+  width: 70%;
+}
+
+.user-card > footer.social {
+  background-color: #e8676b;
+  text-align: center;
+}
+
+.user-card > footer.social a {
+  display: inline-block;
+  line-height: 40px;
+  padding: 5px 0;
+  border-radius: 50%;
+  border: 1px solid black;
+}
+
+.user-card > footer.social a:hover {
+  background-color: #d05c60;
+}
+
+.user-card > footer.social svg {
+  fill: #fff;
+  vertical-align: top;
+  width: 30px;
+  height: 30px;
 }
