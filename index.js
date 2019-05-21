@@ -47,11 +47,20 @@ let a1 = sortedSquares([-20, -19, -14, 18]);
 // console.log("ans1:", a1);
 
 var sortArrayByParity = function(A) {
-  return A.sort((a, b) => {
-    let r1 = a % 2 == 0;
-    let r2 = b % 2 == 0;
-    return r1 && r2 ? 0 : 1;
-  });
+  let arr = Array(A.length);
+  let i = 0;
+  let j = A.length - 1;
+
+  for (const item of A) {
+    if (item % 2 === 0) {
+      arr[i] = item;
+      i += 1;
+    } else {
+      arr[j] = item;
+      j -= 1;
+    }
+  }
+  return arr;
 };
 
 let a2 = sortArrayByParity([3, 1, 2, 4]);
@@ -142,12 +151,42 @@ let run = function() {
 // let node = ll.popHead();
 // node.value();
 
-/**
- * Definition for singly-linked list.
-
- */
-
+/*
+python 动态
+*/
 function ListNode(val) {
   this.val = val;
   this.next = null;
 }
+var reverseList = function(head) {
+  let prev = null;
+  let cur = head;
+  while (cur !== null) {
+    let tmp = cur.next;
+    cur.next = prev;
+    prev = cur;
+    cur = tmp;
+  }
+  return prev;
+};
+
+let n1 = new ListNode(1);
+let n2 = new ListNode(2);
+let n3 = new ListNode(3);
+let n4 = new ListNode(4);
+let n5 = new ListNode(5);
+n1.next = n2;
+n2.next = n3;
+n3.next = n4;
+n4.next = n5;
+
+var middleNode = function(head) {
+  let slow = head;
+  let fast = head;
+  while (fast !== null && fast.next !== null) {
+    slow = slow.next;
+    fast = fast.next.next;
+  }
+  return slow;
+};
+console.log(middleNode(n1));
