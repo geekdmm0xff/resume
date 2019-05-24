@@ -36,7 +36,7 @@ hr {
   width: 100%;
 }
 
-.top-nav-bar > .top-nav-bar-inner {
+.top-nav-bar>.top-nav-bar-inner {
   padding: 0 20px;
 }
 
@@ -47,7 +47,7 @@ hr {
   background-size: cover;
 }
 
-.banner > .cover {
+.banner>.cover {
   background-color: rgba(0, 0, 0, 0.5);
   width: 100%;
   height: 100%;
@@ -59,12 +59,12 @@ hr {
   padding: 10px 0 10px 0;
 }
 
-.top-nav-bar .logo > .rs {
+.top-nav-bar .logo>.rs {
   color: #e8676b;
   margin-right: 5px;
 }
 
-.top-nav-bar .logo > .card {
+.top-nav-bar .logo>.card {
   color: #9a9da2;
 }
 
@@ -73,24 +73,24 @@ hr {
   font-size: 13px;
 }
 
-.top-nav-bar nav > ul {
+.top-nav-bar nav>ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-.top-nav-bar nav > ul > li {
+.top-nav-bar nav>ul>li {
   float: left;
   margin-left: 17px;
   margin-right: 17px;
   /* border: 1px solid green */
 }
 
-.top-nav-bar nav > ul > li:first-child {
+.top-nav-bar nav>ul>li:first-child {
   margin-left: 0;
 }
 
-.top-nav-bar nav > ul > li > a {
+.top-nav-bar nav>ul>li>a {
   color: #c4c4c4;
   font-weight: bold;
   padding-top: 10px;
@@ -99,7 +99,7 @@ hr {
   border-bottom: 2px solid transparent;
 }
 
-.top-nav-bar nav > ul > li > a:hover {
+.top-nav-bar nav>ul>li>a:hover {
   border-bottom: 2px solid salmon;
 }
 
@@ -108,6 +108,7 @@ hr {
   max-width: 930px;
   margin: 0 auto;
   background-color: #fff;
+  box-shadow: 0px 8px 11px -5px rgba(0, 0, 0, 0.5);
 }
 
 .user-card .welcome {
@@ -162,12 +163,12 @@ hr {
   width: 70%;
 }
 
-.user-card > footer.social {
+.user-card>footer.social {
   background-color: #e8676b;
   text-align: center;
 }
 
-.user-card > footer.social a {
+.user-card>footer.social a {
   display: inline-block;
   line-height: 30px;
   padding: 10px 10px;
@@ -175,13 +176,41 @@ hr {
   margin: 16px;
 }
 
-.user-card > footer.social a:hover {
+.user-card>footer.social a:hover {
   background-color: #d05c60;
 }
 
-.user-card > footer.social svg {
+.user-card>footer.social svg {
   width: 30px;
   height: 30px;
   fill: #fff;
   vertical-align: top;
+}
+
+main .download-button-wrapper {
+  text-align: center;
+}
+
+main .download-button {
+  border: 1px solid #CBCDCF;
+  display: inline-block;
+  font-size: 15px;
+  padding: 15px 70px;
+  border-radius: 4px;
+  color: #3d4451;
+  font-weight: bold;
+  margin-top: 30px;
+}
+
+main .download-button:hover {
+  transition: box-shadow 0.2s;
+  box-shadow: 0px 4px 13px 0px rgba(0, 0, 0, 0.5);
+}
+
+.selfIntroduction {
+  /* border: 1px solid red; */
+  max-width: 930px;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 40px;
 }
