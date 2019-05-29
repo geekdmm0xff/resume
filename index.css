@@ -15,6 +15,11 @@ a {
   color: inherit;
 }
 
+ul,
+ol {
+  list-style: none;
+}
+
 hr {
   height: 0;
   border: none;
@@ -213,4 +218,15 @@ main .download-button:hover {
   margin: 0 auto;
   text-align: center;
   margin-top: 40px;
+}
+
+section.skill {
+  border: 1px solid red;
+  max-width: 930px;
+  margin: 0 auto;
+  margin-top: 60px;
+}
+
+section.skill>h2 {
+  text-align: center;
 }
