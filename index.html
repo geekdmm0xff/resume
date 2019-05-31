@@ -108,63 +108,86 @@
       技能：iOS开发、前端开发
     </p>
   </main>
-  <section class="skill clearfix">
+  <section class="skills">
     <h2>技能</h2>
-    <ol>
+    <ol class="clearfix">
       <li>
-        <h4>Objective-C</h4>
+        <h3>Objective-C</h3>
         <div class="progressSlider">
           <div class="progress"></div>
         </div>
       </li>
       <li>
-        <h4>Swift</h4>
+        <h3>Swift</h3>
         <div class="progressSlider">
           <div class="progress"></div>
         </div>
       </li>
       <li>
-        <h4>HTML &amp; CSS</h4>
+        <h3>HTML &amp; CSS</h3>
+        <div class="progressSlider">
+          <div class="progress" style="width: 40%"></div>
+        </div>
+      </li>
+      <li>
+        <h3>JavaScript</h3>
         <div class="progressSlider">
           <div class="progress"></div>
         </div>
       </li>
       <li>
-        <h4>JavaScript</h4>
+        <h3>React</h3>
         <div class="progressSlider">
           <div class="progress"></div>
         </div>
       </li>
       <li>
-        <h4>React</h4>
-        <div class="progressSlider">
-          <div class="progress"></div>
-        </div>
-      </li>
-      <li>
-        <h4>HTTP</h4>
+        <h3>HTTP</h3>
         <div class="progressSlider">
           <div class="progress"></div>
         </div>
       </li>
     </ol>
   </section>
-  <section class="collections">
+  <section class="portfolio">
     <h2>作品集</h2>
     <nav>
-      <ol>
-        <li>全部</li>
-        <li>iOS</li>
-        <li>前端</li>
+      <ol class="clearfix">
+        <li id="portfolioAllType">全部</li>
+        <li id="portfolioMobileType">iOS</li>
+        <li id="portfolioWebType">前端</li>
       </ol>
+      <div id="portfolioBar">
+        <div id="portfolioBar-inner"></div>
+      </div>
     </nav>
-
     <div class="jobs">
-      <div class="big"></div>
-      <div class="small"></div>
-      <div class="small"></div>
+      <div class="big"><img src="./image/1.jpg" alt=""></div>
+      <div class="small" style="top:0px; left:634px;"><img src="./image/2.jpg" alt=""></div>
+      <div class="small" style="top:298px; left:634px;"><img src="./image/3.jpg" alt=""></div>
+    </div>
     </div>
   </section>
 </body>
+
+<script>
+  let elem1 = document.querySelector('#portfolioAllType')
+  let elem2 = document.querySelector('#portfolioMobileType')
+  let elem3 = document.querySelector('#portfolioWebType')
+
+  let bar = document.querySelector('#portfolioBar')
+
+  elem1.addEventListener('click', function () {
+    bar.className = 'styleAll'
+  })
+
+  elem2.addEventListener('click', function () {
+    bar.className = 'styleMobile'
+  })
+
+  elem3.addEventListener('click', function () {
+    bar.className = 'styleWeb'
+  })
+</script>
 
 </html>
