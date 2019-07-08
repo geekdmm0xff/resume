@@ -22,7 +22,7 @@
   <div class="lanuch active" id="lanuch">
     <div class="loading"></div>
   </div>
-  <div class="top-nav-bar">
+  <div id="topNavBar" class="top-nav-bar">
     <div class="top-nav-bar-inner clearfix">
       <a class="logo" href="#" style="float: left;">
         <span class="rs">RS</span><span class="card">card</span>
@@ -201,4 +201,10 @@
   })
 </script>
 
+<script>
+  let nav = document.querySelector('#topNavBar')
+  window.addEventListener('scroll', () => {
+    window.scrollY > 0 ? nav.classList.add('sticky') : nav.classList.remove('sticky')
+  })
+</script>
 </html>
