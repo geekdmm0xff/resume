@@ -5,6 +5,7 @@
   <meta charset="UTF-8" />
   <title>GeekDuan的个人简历</title>
   <link rel="stylesheet" href="./index.css" />
+  <link rel="stylesheet" href="./loading.css" />
   <script src="//at.alicdn.com/t/font_1201265_lou0cmz75ji.js"></script>
   <style type="text/css">
     .icon {
@@ -18,6 +19,9 @@
 </head>
 
 <body>
+  <div class="lanuch active" id="lanuch">
+    <div class="loading"></div>
+  </div>
   <div class="top-nav-bar">
     <div class="top-nav-bar-inner clearfix">
       <a class="logo" href="#" style="float: left;">
@@ -169,6 +173,13 @@
     </div>
   </section>
 </body>
+<script>
+  setTimeout(() => {
+    let lanuch = document.querySelector('#lanuch')
+    lanuch.classList.remove('active')
+  }, 1000);
+
+</script>
 
 <script>
   let elem1 = document.querySelector('#portfolioAllType')
