@@ -36,13 +36,24 @@
             <a href="#">技能</a>
           </li>
           <li>
-            <a href="#">作品</a>
+            <a id="menuTigger" href="#">作品</a>
+            <ul class="submenu">
+              <li>作品1</li>
+              <li>作品2</li>
+              <li>作品3</li>
+            </ul>
           </li>
           <li>
             <a href="#">博客</a>
           </li>
           <li>
-            <a href="#">经历</a>
+            <a id="menuTigger" href="#">经历</a>
+            <ul class="submenu">
+                <li>经历1</li>
+                <li>经历2</li>
+                <li>经历3</li>
+                <li>经历4</li>
+              </ul>
           </li>
           <li>
             <a href="#">联系方式</a>
@@ -206,5 +217,31 @@
   window.addEventListener('scroll', () => {
     window.scrollY > 0 ? nav.classList.add('sticky') : nav.classList.remove('sticky')
   })
+</script>
+
+<script>
+  const findNextSibling = function (element) {
+    if (!element) {
+      return null
+    }
+    let bro = element.nextSibling
+    while(bro.nodeType === Node.TEXT_NODE) {
+      bro = bro.nextSibling
+    }
+    return bro
+  }
+
+  let menus = document.querySelectorAll('#menuTigger')
+  for (let i = 0; i < menus.length; i++) {
+    let menu = menus[i]
+    menu.addEventListener('mouseenter', (e) => {
+      let bro = findNextSibling(e.currentTarget)
+      bro.classList.add('active')
+    })
+    menu.addEventListener('mouseleave', (e) => {
+      let bro = findNextSibling(e.currentTarget)
+      bro.classList.remove('active')
+    })
+  }
 </script>
 </html>

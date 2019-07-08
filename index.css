@@ -81,19 +81,6 @@ hr {
   padding: 0 20px;
 }
 
-.banner {
-  background-image: url("./image/rs-cover.jpg");
-  height: 500px;
-  background-position: center;
-  background-size: cover;
-}
-
-.banner>.cover {
-  background-color: rgba(0, 0, 0, 0.5);
-  width: 100%;
-  height: 100%;
-}
-
 .top-nav-bar .logo {
   font-size: 22px;
   font-family: "Ayuthaya Bolo";
@@ -124,7 +111,7 @@ hr {
   float: left;
   margin-left: 17px;
   margin-right: 17px;
-  /* border: 1px solid green */
+  position: relative;
 }
 
 .top-nav-bar nav>ul>li:first-child {
@@ -138,10 +125,57 @@ hr {
   padding-bottom: 10px;
   display: block;
   border-bottom: 2px solid transparent;
+  position: relative;
 }
 
-.top-nav-bar nav>ul>li>a:hover {
-  border-bottom: 2px solid salmon;
+.top-nav-bar nav>ul>li>a:hover::after {
+  content: "";
+  display: block;
+  background: salmon;
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  animation: menuSlide 0.25s linear;
+}
+
+.top-nav-bar .submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+}
+
+.top-nav-bar .submenu>li {
+  white-space: nowrap;
+}
+
+.top-nav-bar .submenu.active {
+  display: block;
+}
+
+@keyframes menuSlide {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
+
+.banner {
+  background-image: url("./image/rs-cover.jpg");
+  height: 500px;
+  background-position: center;
+  background-size: cover;
+}
+
+.banner>.cover {
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
 }
 
 .user-card {
