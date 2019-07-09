@@ -166,7 +166,7 @@ hr {
   box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.25);
 }
 
-.top-nav-bar nav>ul>li.active>ul {
+.top-nav-bar li.active>.submenu {
   display: block;
   animation: submenuSide 0.25s;
 }
