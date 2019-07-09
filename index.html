@@ -35,8 +35,8 @@
           <li>
             <a href="#">技能</a>
           </li>
-          <li>
-            <a id="menuTigger" href="#">作品</a>
+          <li class="menuTigger">
+            <a href="#">作品</a>
             <ul class="submenu">
               <li>作品1</li>
               <li>作品2</li>
@@ -46,14 +46,14 @@
           <li>
             <a href="#">博客</a>
           </li>
-          <li>
-            <a id="menuTigger" href="#">经历</a>
+          <li class="menuTigger">
+            <a href="#">经历</a>
             <ul class="submenu">
-                <li>经历1</li>
-                <li>经历2</li>
-                <li>经历3</li>
-                <li>经历4</li>
-              </ul>
+              <li>经历1</li>
+              <li>经历2</li>
+              <li>经历3</li>
+              <li>经历4</li>
+            </ul>
           </li>
           <li>
             <a href="#">联系方式</a>
@@ -189,7 +189,6 @@
     let lanuch = document.querySelector('#lanuch')
     lanuch.classList.remove('active')
   }, 1000);
-
 </script>
 
 <script>
@@ -225,23 +224,24 @@
       return null
     }
     let bro = element.nextSibling
-    while(bro.nodeType === Node.TEXT_NODE) {
+    while (bro.nodeType === Node.TEXT_NODE) {
       bro = bro.nextSibling
     }
     return bro
   }
 
-  let menus = document.querySelectorAll('#menuTigger')
+  let menus = document.querySelectorAll('.menuTigger')
   for (let i = 0; i < menus.length; i++) {
     let menu = menus[i]
     menu.addEventListener('mouseenter', (e) => {
-      let bro = findNextSibling(e.currentTarget)
-      bro.classList.add('active')
+      let elem = e.currentTarget
+      elem.classList.add('active')
     })
     menu.addEventListener('mouseleave', (e) => {
-      let bro = findNextSibling(e.currentTarget)
-      bro.classList.remove('active')
+      let elem = e.currentTarget
+      elem.classList.remove('active')
     })
   }
 </script>
+
 </html>

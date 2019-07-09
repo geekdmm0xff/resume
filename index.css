@@ -128,7 +128,7 @@ hr {
   position: relative;
 }
 
-.top-nav-bar nav>ul>li>a:hover::after {
+.top-nav-bar nav>ul>li.active>a::after {
   content: "";
   display: block;
   background: salmon;
@@ -140,21 +140,6 @@ hr {
   animation: menuSlide 0.25s linear;
 }
 
-.top-nav-bar .submenu {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-}
-
-.top-nav-bar .submenu>li {
-  white-space: nowrap;
-}
-
-.top-nav-bar .submenu.active {
-  display: block;
-}
-
 @keyframes menuSlide {
   0% {
     width: 0;
@@ -162,6 +147,37 @@ hr {
 
   100% {
     width: 100%;
+  }
+}
+
+.top-nav-bar .submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+}
+
+.top-nav-bar .submenu>li {
+  white-space: nowrap;
+  padding: 10px 20px;
+  background: #fff;
+  color: #3c4451;
+  font-size: 14px;
+  box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.25);
+}
+
+.top-nav-bar nav>ul>li.active>ul {
+  display: block;
+  animation: submenuSide 0.25s;
+}
+
+@keyframes submenuSide {
+  0% {
+    right: 100%;
+  }
+
+  100% {
+    right: 0;
   }
 }
 
